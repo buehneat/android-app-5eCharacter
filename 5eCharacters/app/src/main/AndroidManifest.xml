@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".newRace"></activity>
+        <activity android:name=".newRace" />
+        <activity android:name=".Listview"></activity>
     </application>
 
 </manifest>

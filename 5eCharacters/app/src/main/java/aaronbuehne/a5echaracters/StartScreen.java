@@ -18,4 +18,5 @@ public class StartScreen extends AppCompatActivity {
         Intent intent = new Intent(this, newRace.class);
         startActivity(intent);
     }
+
 }

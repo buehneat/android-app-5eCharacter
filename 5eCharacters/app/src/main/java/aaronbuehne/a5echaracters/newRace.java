@@ -8,13 +8,49 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+
 public class newRace extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     String[] raceArray = new String[28];
+    public static ArrayList<Race> raceList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_race);
+
+        raceList.add(new Race("Hill Dwarf", "Medium", 0, 0, 2, 0, 1, 0, "", "Common;Dwarvish",
+                "Darkvision. Accustomed to life underground, you have superior vision in dark " +
+                        "and dim conditions. You can see in dim light within 60 feet of you as if " +
+                        "it were bright light, and in darkness as if it were dim light. " +
+                        "You can't discern color in darkness, only shades of gray.\n" +
+                "Dwarven Resilienee. Vou have advantage on saving throws against poison, " +
+                        "and you have resistance against poison damage.\n" +
+                "Dwarven Combat Training. You have proficiency with " +
+                        "the battleaxe, handaxe, throwing hammer, and warhammer.\n" +
+                "Tool Proficieney. You gain proficiency with the artisan's tools of your choice: " +
+                        "smith's toolss, brewer's supplies, or mason's tools.\n" +
+                "Stoneeunning. Whenever you make an Intelligence (History) check related to the origin of " +
+                        "stonework, you are considered proficient in the History skill and add double " +
+                        "your proficiency bonus to the check, instead of your normal proficiency bonus.\n" +
+                "Dwarven Toughness. Your hit point maximum increases by 1, " +
+                        "and it increases by 1 every time you gain a level.", 25));
+
+        raceList.add(new Race("Mountain Dwarf", "Medium", 2, 0, 2, 0, 0, 0, "", "Common;Dwarvish",
+                "Darkvision. Accustomed to life underground, you have superior vision in dark " +
+                        "and dim conditions. You can see in dim light within 60 feet of you as if " +
+                        "it were bright light, and in darkness as if it were dim light. " +
+                        "You can't discern color in darkness, only shades of gray.\n" +
+                        "Dwarven Resilienee. Vou have advantage on saving throws against poison, " +
+                        "and you have resistance against poison damage.\n" +
+                        "Dwarven Combat Training. You have proficiency with " +
+                        "the battleaxe, handaxe, throwing hammer, and warhammer.\n" +
+                        "Tool Proficieney. You gain proficiency with the artisan's tools of your choice: " +
+                        "smith's toolss, brewer's supplies, or mason's tools.\n" +
+                        "Stoneeunning. Whenever you make an Intelligence (History) check related to the origin of " +
+                        "stonework, you are considered proficient in the History skill and add double " +
+                        "your proficiency bonus to the check, instead of your normal proficiency bonus.\n" +
+                        "Dwarven Armor Training. You have proficiency with light and medium armor.", 25));
 
         raceArray[0] = "Dwarf\n";
         raceArray[1] = "Elf\n";

@@ -11,6 +11,9 @@ public class Character {
     public int inteli;
     public int wis;
     public int chr;
+    public Race race;
+
+    public int speed;
 
     public Character() {
         int str = -1;
@@ -19,15 +22,25 @@ public class Character {
         int inteli = -1;
         int wis = -1;
         int chr = -1;
+        race = null;
     }
 
-    public Character(int str, int dex, int con, int intelli, int wis, int chr) {
+    public Character(Race race, int str, int dex, int con, int intelli, int wis, int chr) {
+        this.race = race;
         this.str = str;
         this.dex = dex;
         this.con = con;
         this.inteli = intelli;
         this.wis = wis;
         this.chr = chr;
+    }
+
+    public Race getRace() {
+        return race;
+    }
+
+    public void setRace(Race race) {
+        this.race = race;
     }
 
     public void setStr(int str) {

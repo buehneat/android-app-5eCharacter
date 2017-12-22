@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".newRace" />
-        <activity android:name=".Listview"></activity>
+        <activity android:name=".Listview" />
+        <activity android:name=".newClass"></activity>
     </application>
 
 </manifest>

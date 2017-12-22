@@ -22,7 +22,7 @@ public class newRace extends AppCompatActivity implements AdapterView.OnItemClic
         this.populateList();
 
         raceArray[0] = "Dwarf\n";
-        raceArray[1] = "Elf\n";
+        /*raceArray[1] = "Elf\n";
         raceArray[2] = "Halfling\n";
         raceArray[3] = "Human\n";
         raceArray[4] = "Dragonborn\n";
@@ -48,7 +48,7 @@ public class newRace extends AppCompatActivity implements AdapterView.OnItemClic
         raceArray[24] = "Shifter\n";
         raceArray[25] = "Warforged\n";
         raceArray[26] = "Gith\n";
-        raceArray[27] = "Make Your Own\n";
+        raceArray[27] = "Make Your Own\n";*/
 
         ArrayAdapter adapter = new ArrayAdapter<String>(this,
                 R.layout.activity_listview, R.id.listTextView, raceArray);
@@ -59,7 +59,10 @@ public class newRace extends AppCompatActivity implements AdapterView.OnItemClic
     }
 
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        Intent intent = null;
+        Intent intent = new Intent(this, newClass.class);
+        Character temp = new Character();
+        temp.setRace(raceList.get(i));
+        StartScreen.characterBank.add(temp);
     }
 
     public void back(View view)

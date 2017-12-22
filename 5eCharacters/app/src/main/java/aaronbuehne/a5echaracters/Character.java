@@ -5,6 +5,7 @@ package aaronbuehne.a5echaracters;
  */
 
 public class Character {
+    public  String name;
     public int str;
     public int dex;
     public int con;
@@ -16,16 +17,18 @@ public class Character {
     public int speed;
 
     public Character() {
-        int str = -1;
-        int dex = -1;
-        int con = -1;
-        int inteli = -1;
-        int wis = -1;
-        int chr = -1;
+        name = null;
+        str = -1;
+        dex = -1;
+        con = -1;
+        inteli = -1;
+        wis = -1;
+        chr = -1;
         race = null;
     }
 
-    public Character(Race race, int str, int dex, int con, int intelli, int wis, int chr) {
+    public Character(String name, Race race, int str, int dex, int con, int intelli, int wis, int chr) {
+        this.name = name;
         this.race = race;
         this.str = str;
         this.dex = dex;
@@ -89,5 +92,21 @@ public class Character {
 
     public int getChr() {
         return chr;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
     }
 }

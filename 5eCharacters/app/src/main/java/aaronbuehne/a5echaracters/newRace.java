@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class newRace extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    String[] raceArray = new String[28];
+    String[] raceArray = new String[1];
     public static ArrayList<Race> raceList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class newRace extends AppCompatActivity implements AdapterView.OnItemClic
 
         this.populateList();
 
-        raceArray[0] = "Dwarf\n";
+        raceArray[0] = "Hill Dwarf\n";
         /*raceArray[1] = "Elf\n";
         raceArray[2] = "Halfling\n";
         raceArray[3] = "Human\n";
@@ -63,6 +63,7 @@ public class newRace extends AppCompatActivity implements AdapterView.OnItemClic
         Character temp = new Character();
         temp.setRace(raceList.get(i));
         StartScreen.characterBank.add(temp);
+        startActivity(intent);
     }
 
     public void back(View view)
